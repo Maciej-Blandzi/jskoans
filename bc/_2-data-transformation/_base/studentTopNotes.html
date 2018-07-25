@@ -11,9 +11,18 @@
    *
    * @param students
    */
+
+
+
   function getStudentTopNotes(students) {
-    // TODO implement
+    return students.map(function(x){
+      return Math.max.apply(null, x.notes)
+    })
+
   }
+
+
+
   QUnit.test('Get top notes', function (assert) {
     assert.deepEqual(
       getStudentTopNotes(data.students),

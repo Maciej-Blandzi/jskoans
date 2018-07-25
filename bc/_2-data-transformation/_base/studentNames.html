@@ -11,9 +11,15 @@
    *
    * @param students
    */
+
+
   function getStudentNames(students) {
-    // TODO implement
+    return students.map(function(x){
+      return x.name
+    })
   }
+
+
   QUnit.test('Get student names', function (assert) {
     assert.deepEqual(
       getStudentNames(data.students),
