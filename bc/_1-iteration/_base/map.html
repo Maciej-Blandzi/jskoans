@@ -11,9 +11,14 @@
    * @param items - array
    * @param transform - function that returns new item and accepts item as an argument
    */
+
+
   function map(items, transform) {
-    // TODO implement
+    return items.map(transform)
   }
+
+
+
   QUnit.test('Map items', function (assert) {
     assert.deepEqual(map([1, 2, 3], function (item) {
       return item * 10;

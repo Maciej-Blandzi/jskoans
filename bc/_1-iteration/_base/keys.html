@@ -10,9 +10,16 @@
    *
    * @param object - object
    */
+
+
+
   function keys(object) {
-    // TODO implement
+    return object.keys(object)
   }
+
+
+
+
   QUnit.test('Get keys from object', function (assert) {
     assert.deepEqual(keys({}), []);
     assert.deepEqual(keys([]), []);

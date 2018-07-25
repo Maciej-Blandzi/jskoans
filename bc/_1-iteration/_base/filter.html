@@ -11,9 +11,13 @@
    * @param items - array
    * @param predicate - function that returns boolean value and accepts item as an argument
    */
+
+
   function filter(items, predicate) {
-    // TODO implement
+    return items.filter(predicate)
   }
+
+
   QUnit.test('Filter items', function (assert) {
     assert.deepEqual(
       filter(

@@ -12,9 +12,16 @@
    * @param process - function that returns single value and accepts previous iteration
    *                  result and currently iterated element.
    */
+
+
   function reduce(items, process) {
-    // TODO implement
+    return items !==[]
+      ? items.reduce(process)
+      : []
+
   }
+
+
   QUnit.test('Reduce items', function (assert) {
     assert.deepEqual(reduce([1, 2], function (prev, curr) {
       return prev + curr;
