@@ -13,9 +13,13 @@
    * @param a
    * @param b
    */
+
   function sum(a, b) {
-    // TODO implement
+    if(isNaN(a) || isNaN(b)){
+      throw new TypeError('Number expected')
+    }return a+b
   }
+
   QUnit.test('Sum two integers throws on wrong type of arguments', function (assert) {
     var data = [
       ['a', 0],

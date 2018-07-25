@@ -12,8 +12,11 @@
    * @param x
    */
   function string(x) {
-   // TODO implement
+    if (typeof x === 'string') {
+      return x
+    } throw new TypeError('String expected')
   }
+
   QUnit.test('Throws for non strings', function (assert) {
     var data = [
       1,
