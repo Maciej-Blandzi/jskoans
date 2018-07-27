@@ -11,9 +11,25 @@
    *
    * @param students
    */
+
+
   function getStudentsWithAverage(students) {
-    // TODO implement
+    return students.map(function(x){
+      return{
+        avg: x.notes.reduce(function(a,b){
+          return (a + b)
+        })/x.notes.length,
+        id: x.id,
+        name: x.name
+
+
+      }
+
+    })
   }
+
+
+
   QUnit.test('Get students with average notes', function (assert) {
     assert.deepEqual(
       getStudentsWithAverage(data.students),
