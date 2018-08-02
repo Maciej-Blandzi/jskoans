@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="../../../vendor/qunit.css">
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../../../vendor/qunit.js"></script>
+<script src="../data.js"></script>
+<script>
+  /**
+   * Returns an array with students having average of their notes.
+   *
+   * @param students
+   */
+
+
+  function getStudentsWithAverage(students) {
+    return students.map(function(x){
+      return{
+        avg: x.notes.reduce(function(a,b){
+          return (a + b)
+        })/x.notes.length,
+        id: x.id,
+        name: x.name
+
+
+      }
+
+    })
+  }
+
+
+
+  QUnit.test('Get students with average notes', function (assert) {
+    assert.deepEqual(
+      getStudentsWithAverage(data.students),
+      [
+        {
+          id: 1,
+          name: 'Jacek',
+          avg: 4
+        },
+        {
+          id: 2,
+          name: 'Ewa',
+          avg: 3
+        },
+        {
+          id: 3,
+          name: 'Zygmunt',
+          avg: 3
+        }
+      ]
+    );
+  });
+</script>
